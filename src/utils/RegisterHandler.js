@@ -6,6 +6,7 @@ import {
   setUserName,
 } from '../redux/RegisterReducer';
 import {SCREEN} from '../constants';
+import {Alert} from 'react-native';
 
 /* Validate user data input and check if it is not empty or username email  duplicated and if passwords are match*/
 /* Save User */
@@ -26,39 +27,25 @@ const RegisterHandler = ({
   const ReducerEmail = useSelector(state => state.RegisterData.ReducerEmail);
 
   const handleDataReg = () => {
-    if (username === ' ')
-      return PushNotificationsIOS.getInitialNotification('Enter User Name');
-    if (email === ' ')
-      return PushNotificationsIOS.getInitialNotification('Enter Email');
+    if (username === ' ') return Alert.alert('Enter User Name');
+    if (email === ' ') return Alert.alert('Enter Email');
 
     // Check if email is not in correct format
     if (!emailRegex.test(email)) {
-      PushNotificationsIOS.getInitialNotification(
-        'Enter a valid email address',
-      );
+      Alert.alert('Enter a valid email address');
       return;
     }
-    if (password === ' ')
-      return PushNotificationsIOS.getInitialNotification('Enter password');
-    if (confirmPassword === ' ')
-      return PushNotificationsIOS.getInitialNotification(
-        'Enter Confirm Password',
-      );
-    if (!policyAgree)
-      return PushNotificationsIOS.getInitialNotification('Agree to policy');
+    if (password === ' ') return Alert.alert('Enter password');
+    if (confirmPassword === ' ') return Alert.alert('Enter Confirm Password');
+    if (!policyAgree) return Alert.alert('Agree to policy');
 
-    if (password !== confirmPassword)
-      return PushNotificationsIOS.getInitialNotification('Password not match');
+    if (password !== confirmPassword) return Alert.alert('Password not match');
 
     if (ReducerName === username) {
-      return PushNotificationsIOS.getInitialNotification(
-        'This username already exist',
-      );
+      return Alert.alert('This username already exist');
     }
     if (ReducerEmail === email) {
-      return PushNotificationsIOS.getInitialNotification(
-        'This Email already exist',
-      );
+      return Alert.alert('This Email already exist');
     }
     dispatch(setUserName(username));
     dispatch(setUserEmail(email));
