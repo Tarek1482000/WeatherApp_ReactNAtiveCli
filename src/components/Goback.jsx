@@ -40,13 +40,15 @@ const Goback = ({screen}) => {
             style={{
               position: 'absolute',
               zIndex: 1,
+              marginHorizontal: SIZE.xLarge,
+              marginVertical: SIZE.small,
             }}
             onPress={goBack}>
             <Image
               source={WeatherBack}
               style={{
-                width: SIZE.xLarge * 2,
-                height: SIZE.xLarge * 2,
+                width: SIZE.xLarge * 2.2,
+                height: SIZE.xLarge * 2.2,
                 resizeMode: 'cover',
                 marginVertical: SIZE.xLarge * 1.3,
                 marginHorizontal: SIZE.large,

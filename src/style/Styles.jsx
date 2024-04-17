@@ -18,7 +18,9 @@ const SignUpStyle = StyleSheet.create({
   },
   backButton: {
     resizeMode: 'contain',
-    width: SIZE.xLarge * 1.8,
+    marginHorizontal: SIZE.xLarge,
+    marginVertical: SIZE.xLarge,
+    width: SIZE.xLarge * 2,
     height: SIZE.xLarge * 3,
   },
   image: {resizeMode: 'contain', width: '100%'},
@@ -44,6 +46,7 @@ const SignUpStyle = StyleSheet.create({
     borderWidth: 0.2,
     borderRadius: 4,
     paddingHorizontal: SIZE.xLarge * 2.2,
+    color: COLOR.black,
   },
 
   policyCheckContainer: {
@@ -88,8 +91,10 @@ const SignInStyle = StyleSheet.create({
     marginVertical: SIZE.xLarge * 5.3,
   },
   backButton: {
+    marginHorizontal: SIZE.xLarge,
+    marginVertical: SIZE.xLarge,
     resizeMode: 'contain',
-    width: SIZE.xLarge * 1.8,
+    width: SIZE.xLarge * 2,
     height: SIZE.xLarge * 3,
   },
   image: {resizeMode: 'contain', width: '100%'},
@@ -117,6 +122,7 @@ const SignInStyle = StyleSheet.create({
     width: '100%',
     marginHorizontal: SIZE.xLarge * -1.6,
     paddingHorizontal: SIZE.xLarge * 1.6,
+    color: COLOR.black,
   },
 
   forgotPassTextContainer: {
@@ -166,6 +172,8 @@ const SignInStyle = StyleSheet.create({
   },
   IconBackground: {
     justifyContent: 'center',
+    alignItems: 'center',
+    alignContent:'center',
     borderWidth: 0.3,
     borderColor: COLOR.gray,
     borderRadius: SIZE.small - 5,
@@ -179,8 +187,8 @@ const SignInStyle = StyleSheet.create({
     borderWidth: 0.3,
     borderColor: COLOR.gray,
     borderRadius: SIZE.small - 5,
-    height: '26%',
-    width: '14%',
+    height: '25%',
+    width: '13%',
     marginHorizontal: SIZE.small,
     paddingHorizontal: SIZE.small,
   },
@@ -211,7 +219,7 @@ const WeatherStyle = StyleSheet.create({
   image: {width: '100%', height: '40%', resizeMode: 'contain'},
   WeatherDataContainer: {
     flex: 1,
-    marginVertical: SIZE.xLarge * -10,
+    marginVertical: SIZE.xLarge * -11,
     marginHorizontal: SIZE.xLarge,
   },
 
