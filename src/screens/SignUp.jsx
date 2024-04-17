@@ -6,7 +6,7 @@ import SignHeader from '../components/SignHeader';
 import Input from '../components/Input';
 import MyButton from '../components/MyButton';
 import RegisterHandler from '../utils/RegisterHandler';
-import {SCREEN, SIZE} from '../constants';
+import {COLOR, SCREEN, SIZE} from '../constants';
 
 /* Sign Up Screen Which take user data and save it with redux after validate it */
 const SignUp = () => {
@@ -68,6 +68,7 @@ const SignUp = () => {
             disabled={false}
             value={togglePolicyCheckBox}
             onValueChange={newValue => setPolicyCheckBox(newValue)}
+            tintColors={{true: COLOR.purple, false: COLOR.gray}}
           />
           <View style={Styles.SignUpStyle.policyTextContainer}>
             <Text style={Styles.SignUpStyle.policyText}>

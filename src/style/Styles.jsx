@@ -214,6 +214,25 @@ const WeatherStyle = StyleSheet.create({
     marginVertical: SIZE.xLarge * -10,
     marginHorizontal: SIZE.xLarge,
   },
+
+  temperatureText: {
+    position: 'absolute',
+    zIndex: 1,
+    color: COLOR.orange,
+    marginTop: SIZE.xLarge * 4,
+    marginLeft: SIZE.xLarge * 2,
+  },
+  cityTextContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '85%',
+    marginLeft: SIZE.xLarge * 0.2,
+    marginTop: SIZE.xLarge * -3,
+    marginVertical: SIZE.xLarge * -2.3,
+  },
+  time_Location_Texts_Colors: {
+    color: COLOR.black,
+  },
 });
 
 export default {

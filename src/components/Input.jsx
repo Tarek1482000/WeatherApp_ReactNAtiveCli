@@ -42,6 +42,7 @@ const Input = ({value, placeholder, inputScreen, getInputValue}) => {
               }}>
               <TextInput
                 placeholder={placeholder}
+                placeholderTextColor={COLOR.gray}
                 style={[Styles.SignUpStyle.input, {width: '100%'}]}
                 inputMode={value === 'Email' ? 'email' : 'text'}
                 secureTextEntry={isPass}
@@ -53,6 +54,7 @@ const Input = ({value, placeholder, inputScreen, getInputValue}) => {
                 <EyeIcon
                   name="eye-outline"
                   size={SIZE.xLarge}
+                  color={COLOR.gray}
                   onPress={() => (isPass ? setPass(false) : setPass(true))}
                 />
               </View>
@@ -61,6 +63,7 @@ const Input = ({value, placeholder, inputScreen, getInputValue}) => {
             <View>
               {/* If password not require */}
               <TextInput
+                placeholderTextColor={COLOR.gray}
                 placeholder={placeholder}
                 style={Styles.SignUpStyle.input}
                 inputMode={value === 'Email' ? 'email' : 'text'}
@@ -96,6 +99,7 @@ const Input = ({value, placeholder, inputScreen, getInputValue}) => {
                 <LockIcon name="lock" size={SIZE.large} color={COLOR.black} />
               </View>
               <TextInput
+                placeholderTextColor={COLOR.gray}
                 placeholder={placeholder}
                 style={Styles.SignInStyle.input}
                 inputMode={value === 'Email' ? 'email' : 'text'}
@@ -120,6 +124,7 @@ const Input = ({value, placeholder, inputScreen, getInputValue}) => {
                 />
               </View>
               <TextInput
+                placeholderTextColor={COLOR.gray}
                 placeholder={placeholder}
                 style={Styles.SignInStyle.input}
                 inputMode={value === 'Email' ? 'email' : 'text'}
