@@ -7,9 +7,12 @@ import {
 import React from 'react';
 import Styles from '../style/Styles';
 
-import SignBack from '../assets/images/SignBack.png';
+// import SignBack from '../assets/images/SignBack.png';
+// import WeatherBack from '../assets/images/WeatherBack.png';
 
-import WeatherBack from '../assets/images/WeatherBack.png';
+const SignBack = require('../assets/images/SignBack.png');
+const WeatherBack = require('../assets/images/WeatherBack.png');
+
 import useGoBack from '../navigation/useGoBack';
 import {SCREEN, SIZE} from '../constants';
 
@@ -47,11 +50,11 @@ const Goback = ({screen}) => {
             <Image
               source={WeatherBack}
               style={{
-                width: SIZE.xLarge * 2.2,
-                height: SIZE.xLarge * 2.2,
+                width: SIZE.xLarge * 1.9,
+                height: SIZE.xLarge * 1.9,
                 resizeMode: 'cover',
-                marginVertical: SIZE.xLarge * 1.3,
-                marginHorizontal: SIZE.large,
+                marginVertical: SIZE.large + 5,
+                marginHorizontal: SIZE.small,
               }}
             />
           </TouchableOpacity>

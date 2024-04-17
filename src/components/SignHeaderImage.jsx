@@ -1,7 +1,11 @@
 import {Image, Text, View} from 'react-native';
 import React from 'react';
-import SignInHeader from '../assets/images/SignInHeader.png';
-import SignUpHeader from '../assets/images/SignUpHeader.png';
+// import SignInHeader from '../assets/images/SignInHeader.png';
+// import SignUpHeader from '../assets/images/SignUpHeader.png';
+
+const SignInHeader = require('../assets/images/SignInHeader.png');
+const SignUpHeader = require('../assets/images/SignUpHeader.png');
+
 import Styles from '../style/Styles';
 import {SCREEN} from '../constants';
 

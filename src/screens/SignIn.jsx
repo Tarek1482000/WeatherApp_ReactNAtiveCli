@@ -8,7 +8,8 @@ import LoginHandler from '../utils/LoginHandler';
 import {COLOR, SCREEN, SIZE} from '../constants';
 import TwitterIcon from 'react-native-vector-icons/AntDesign';
 import FacebookIcon from 'react-native-vector-icons/Ionicons';
-import GoogleIcon from '../assets/images/GoogleIcon.png';
+// import GoogleIcon from '../assets/images/GoogleIcon.png';
+const GoogleIcon = require('../assets/images/GoogleIcon.png');
 
 /* Handle User Login Data and validate it then go to next screen */
 const SignIn = () => {

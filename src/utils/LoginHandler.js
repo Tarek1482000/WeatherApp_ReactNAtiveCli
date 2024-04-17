@@ -17,10 +17,10 @@ const LoginHandler = ({email: email, password: password}) => {
       if (ReducerPassword === password) {
         navigation.navigate(SCREEN.Weather);
       } else {
-        console.error('Wrong Password');
+        PushNotificationsIOS.getInitialNotification('Wrong Password');
       }
     } else {
-      console.error('Wrong email');
+      PushNotificationsIOS.getInitialNotification('Wrong email');
     }
   };
 

@@ -1,5 +1,4 @@
 import {StyleSheet, StatusBar} from 'react-native';
-import React from 'react';
 import {COLOR, FONT, SIZE} from '../constants/index';
 
 /* Sign Up Screen Components style */
@@ -18,8 +17,8 @@ const SignUpStyle = StyleSheet.create({
   },
   backButton: {
     resizeMode: 'contain',
-    marginHorizontal: SIZE.xLarge,
-    marginVertical: SIZE.xLarge,
+    marginHorizontal: SIZE.small,
+    marginVertical: SIZE.small - 9,
     width: SIZE.xLarge * 2,
     height: SIZE.xLarge * 3,
   },
@@ -91,9 +90,9 @@ const SignInStyle = StyleSheet.create({
     marginVertical: SIZE.xLarge * 5.3,
   },
   backButton: {
-    marginHorizontal: SIZE.xLarge,
-    marginVertical: SIZE.xLarge,
     resizeMode: 'contain',
+    marginHorizontal: SIZE.small,
+    marginVertical: SIZE.small - 9,
     width: SIZE.xLarge * 2,
     height: SIZE.xLarge * 3,
   },
@@ -173,12 +172,12 @@ const SignInStyle = StyleSheet.create({
   IconBackground: {
     justifyContent: 'center',
     alignItems: 'center',
-    alignContent:'center',
+    alignContent: 'center',
     borderWidth: 0.3,
     borderColor: COLOR.gray,
     borderRadius: SIZE.small - 5,
     height: '26%',
-    width: '14%',
+    width: '15%',
     marginHorizontal: SIZE.small,
     paddingHorizontal: SIZE.small,
   },
@@ -188,7 +187,7 @@ const SignInStyle = StyleSheet.create({
     borderColor: COLOR.gray,
     borderRadius: SIZE.small - 5,
     height: '25%',
-    width: '13%',
+    width: '15%',
     marginHorizontal: SIZE.small,
     paddingHorizontal: SIZE.small,
   },
@@ -219,7 +218,7 @@ const WeatherStyle = StyleSheet.create({
   image: {width: '100%', height: '40%', resizeMode: 'contain'},
   WeatherDataContainer: {
     flex: 1,
-    marginVertical: SIZE.xLarge * -11,
+    marginVertical: SIZE.xLarge * -10,
     marginHorizontal: SIZE.xLarge,
   },
 

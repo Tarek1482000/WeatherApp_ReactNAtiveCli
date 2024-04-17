@@ -2,8 +2,8 @@ import {View} from 'react-native';
 import React from 'react';
 
 import SignHeaderImage from '../components/SignHeaderImage';
+
 import Goback from '../components/Goback';
-import {SCREEN, SIZE} from '../constants';
 import Styles from '../style/Styles';
 
 /* Header Image integreted with Back Button configurations */

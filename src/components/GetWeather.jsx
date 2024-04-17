@@ -1,7 +1,10 @@
 import {View, Text, Image} from 'react-native';
 import React, {useEffect, useState} from 'react';
 
-import SunImage from '../assets/images/WeatherSun.png';
+// import SunImage from '../assets/images/WeatherSun.png';
+
+const SunImage = require('../assets/images/WeatherSun.png');
+
 import {COLOR, FONT, SIZE} from '../constants';
 
 import DateIcon from 'react-native-vector-icons/AntDesign';

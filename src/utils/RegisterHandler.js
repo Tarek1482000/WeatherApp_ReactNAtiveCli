@@ -26,26 +26,39 @@ const RegisterHandler = ({
   const ReducerEmail = useSelector(state => state.RegisterData.ReducerEmail);
 
   const handleDataReg = () => {
-    if (username === ' ') return console.error('Enter User Name');
-    if (email === ' ') return console.error('Enter Email');
+    if (username === ' ')
+      return PushNotificationsIOS.getInitialNotification('Enter User Name');
+    if (email === ' ')
+      return PushNotificationsIOS.getInitialNotification('Enter Email');
 
     // Check if email is not in correct format
     if (!emailRegex.test(email)) {
-      console.error('Enter a valid email address');
+      PushNotificationsIOS.getInitialNotification(
+        'Enter a valid email address',
+      );
       return;
     }
-    if (password === ' ') return console.error('Enter password');
-    if (confirmPassword === ' ') return console.error('Enter Confirm Password');
-    if (!policyAgree) return console.error('Agree to policy');
+    if (password === ' ')
+      return PushNotificationsIOS.getInitialNotification('Enter password');
+    if (confirmPassword === ' ')
+      return PushNotificationsIOS.getInitialNotification(
+        'Enter Confirm Password',
+      );
+    if (!policyAgree)
+      return PushNotificationsIOS.getInitialNotification('Agree to policy');
 
     if (password !== confirmPassword)
-      return console.error('Password not match');
+      return PushNotificationsIOS.getInitialNotification('Password not match');
 
     if (ReducerName === username) {
-      return console.error('This username already exist');
+      return PushNotificationsIOS.getInitialNotification(
+        'This username already exist',
+      );
     }
     if (ReducerEmail === email) {
-      return console.error('This Email already exist');
+      return PushNotificationsIOS.getInitialNotification(
+        'This Email already exist',
+      );
     }
     dispatch(setUserName(username));
     dispatch(setUserEmail(email));

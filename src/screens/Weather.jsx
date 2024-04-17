@@ -5,7 +5,6 @@ import WeatherHeader from '../components/WeatherHeader';
 import Styles from '../style/Styles';
 import {SCREEN, SIZE} from '../constants';
 import Goback from '../components/Goback';
-import Input from '../components/Input';
 import GetWeather from '../components/GetWeather';
 
 /* Screen responsible for getting data  from API and Display it */
