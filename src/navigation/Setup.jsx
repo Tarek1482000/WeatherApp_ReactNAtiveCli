@@ -9,6 +9,7 @@ import SignIn from '../screens/SignIn';
 import Weather from '../screens/Weather';
 import {store} from '../redux/Store';
 import {Provider} from 'react-redux';
+import FlashMessage from 'react-native-flash-message';
 
 /* Setup Redux and Navigation  Configurations */
 const Setup = ({startScreen}) => {
@@ -24,6 +25,7 @@ const Setup = ({startScreen}) => {
           <Stack.Screen name="SignIn" component={SignIn} />
           <Stack.Screen name="Weather" component={Weather} />
         </Stack.Navigator>
+        <FlashMessage position="top" />
       </Provider>
     </NavigationContainer>
   );
